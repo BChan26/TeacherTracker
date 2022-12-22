@@ -2,6 +2,7 @@ from rest_framework import generics
 from django.shortcuts import render
 from .models import Student, Tracker, Thought
 from .serializers import StudentSerializer, TrackerSerializer, ThoughtSerializer
+from .filters import StudentFilter
 # Create your views here.
 
 class StudentList (generics.ListCreateAPIView):
@@ -27,3 +28,7 @@ class ThoughtList (generics.ListCreateAPIView):
 class ThoughtDetail (generics.RetrieveUpdateDestroyAPIView):
     queryset = Thought.objects.all()
     serializer_class = ThoughtSerializer
+
+def StudentFilter(request):
+    f = StudentFilter(request.GET, queryset=StudentFilter.objects.all())
+    return render(request, 'localhost:8000/students/', {'filter': f})
