@@ -23,6 +23,7 @@ class StudentSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('studentname', 'gradesection', 'cst', 'icap', 'ell', 'iep', 'a504', 'tracker')
 
 class ThoughtSerializer(serializers.HyperlinkedModelSerializer):
+
     class Meta: 
         model = Thought
-        fields = ('thought')
+        fields = ('thought',)
