@@ -10,9 +10,18 @@ class TrackerSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Tracker
-        fields = ('trackername', 'datetime', 'ontask','followexpectation', 'askforhelp', 'comments', 'student')
+        fields = ('id', 'trackername', 'datetime', 'ontask','followexpectation', 'askforhelp', 'comments', 'student',
+        )
+
+
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
+    # tracker = serializers.HyperlinkedRelatedField(
+    #     view_name='tracker-detail',
+    #     many=True,
+    #     read_only=True
+    # )
+
     tracker = TrackerSerializer(
         many=True,
         read_only=True
@@ -20,10 +29,13 @@ class StudentSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Student
-        fields = ('studentname', 'gradesection', 'cst', 'icap', 'ell', 'iep', 'a504', 'tracker')
+        fields = ('id', 'studentname', 'gradesection', 'cst', 'icap', 'ell', 'iep', 'a504', 'tracker',
+        )
+
+
 
 class ThoughtSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta: 
         model = Thought
-        fields = ('thought',)
+        fields = ('id', 'thought',)

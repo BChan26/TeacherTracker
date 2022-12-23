@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+
+// import react from "react"
+// const DataContext = react.createContext();
+
+import { Route, Routes } from "react-router-dom"
+import CreateStudent from "./components/CreateStudent"
+import Nav from "./components/Nav"
+import Read from "./components/Read"
+import Thoughts from "./components/Thoughts"
+import Tracker from "./components/Tracker"
+
+// import { useState, useEffect } from "react"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+      <div className="App">
+        <header>
+          <Nav></Nav>
+        </header>
+
+        <main>
+          <Routes>
+            <Route path="/" element={<Tracker/>} />
+            <Route path="/CreateStudent" element={<CreateStudent/>} />
+            <Route path="/Thoughts" element={<Thoughts/>} />
+            <Route path="/Read" element={<Read/>} />
+          </Routes>
+        </main>
+      </div>
+  )
 }
 
 export default App;
