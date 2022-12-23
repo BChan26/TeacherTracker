@@ -16,12 +16,6 @@ class TrackerSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
-    # tracker = serializers.HyperlinkedRelatedField(
-    #     view_name='tracker-detail',
-    #     many=True,
-    #     read_only=True
-    # )
-
     tracker = TrackerSerializer(
         many=True,
         read_only=True

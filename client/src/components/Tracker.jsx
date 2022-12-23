@@ -8,21 +8,15 @@ export default function Tracker() {
     //////////////////Time////////////////////
     //https://reactgo.com/javascript-get-time/
     const current = new Date();
-    const time = current.toLocaleTimeString("en-US", {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false
-    });
-    // console.log(time);
 
     const [formData, setFormData] = useState({
         trackername: '',
-        // datetime: '',
+        datetime: current,
         ontask: false,
         followexpectation: false,
         askforhelp: false, 
         comments: '',
-        student: '',
+        // student: '',
     })
 
     const handleLoginForm = (e) => {
