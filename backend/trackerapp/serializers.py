@@ -32,4 +32,4 @@ class ThoughtSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta: 
         model = Thought
-        fields = ('id', 'thought',)
+        fields = ('id', 'thought', 'datetime')
