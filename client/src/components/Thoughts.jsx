@@ -32,6 +32,14 @@ export default function Thoughts() {
                         </Table.HeadCell>
 
                         <Table.HeadCell>
+                        Date
+                        </Table.HeadCell>
+
+                        <Table.HeadCell>
+                        Time
+                        </Table.HeadCell>
+
+                        <Table.HeadCell>
                         Edit?
                         </Table.HeadCell>
                     </Table.Head>
@@ -41,6 +49,14 @@ export default function Thoughts() {
                         <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={value.id}>
                         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                             {value.thought}
+                        </Table.Cell>
+
+                        <Table.Cell>
+                        {value.datetime.slice(0,10)}
+                        </Table.Cell>
+
+                        <Table.Cell>
+                        {value.datetime.slice(11,19)}
                         </Table.Cell>
 
                         <Table.Cell>

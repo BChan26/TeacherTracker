@@ -5,8 +5,13 @@ import { Button, Label, Textarea } from 'flowbite-react'
 
 export default function NewThought() {
 
+    //////////////////Time////////////////////
+    //https://reactgo.com/javascript-get-time/
+    const current = new Date();
+
     const [formData, setFormData] = useState({
         thought: '',
+        datetime: current,
     })
 
     const handleThoughtForm = (e) => {
