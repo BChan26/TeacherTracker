@@ -1,6 +1,5 @@
 import axios from "axios"
 import { useState } from "react"
-// import { useEffect, useState, useContext } from "react"
 import { Button, Label, Textarea } from 'flowbite-react'
 
 export default function NewThought() {

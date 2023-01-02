@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import moment from "moment"
 import { Table } from "flowbite-react"
 
 export default function Thoughts() {
@@ -32,11 +33,7 @@ export default function Thoughts() {
                         </Table.HeadCell>
 
                         <Table.HeadCell>
-                        Date
-                        </Table.HeadCell>
-
-                        <Table.HeadCell>
-                        Time
+                        Date/Time
                         </Table.HeadCell>
 
                         <Table.HeadCell>
@@ -52,11 +49,7 @@ export default function Thoughts() {
                         </Table.Cell>
 
                         <Table.Cell>
-                        {value.datetime.slice(0,10)}
-                        </Table.Cell>
-
-                        <Table.Cell>
-                        {value.datetime.slice(11,19)}
+                        {moment(value.datetime).format("MMMM Do YYYY, h:mm a")}
                         </Table.Cell>
 
                         <Table.Cell>

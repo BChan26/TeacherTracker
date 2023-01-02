@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import moment from "moment"
 import { Table } from "flowbite-react"
 
 export default function Read() {
@@ -9,14 +10,13 @@ export default function Read() {
             const tracker = await axios.get(`http://localhost:8000/trackers/`)
             console.log(tracker.data)
             setTrackers(tracker.data)
-            // return tracker.data
             
         } catch (error) {
             throw error 
         }
     }
 
-    //UseState and UseEffect for Mapping Out Posts
+    //UseState and UseEffect for Mapping Out Trackers
     const [trackers, setTrackers] = useState([])
     useEffect(() => {
     handleTrackers()
@@ -33,10 +33,7 @@ export default function Read() {
                         Student
                         </Table.HeadCell>
                         <Table.HeadCell>
-                        Date
-                        </Table.HeadCell>
-                        <Table.HeadCell>
-                        Time
+                        Date/Time
                         </Table.HeadCell>
                         <Table.HeadCell>
                         Tracker Name
@@ -65,11 +62,8 @@ export default function Read() {
                             {value.student}
                         </Table.Cell>
                         <Table.Cell>
-                            {value.datetime.slice(0,10)}
+                            {moment(value.datetime).format("MMMM Do YYYY, h:mm a")}
                         </Table.Cell>                        
-                        <Table.Cell>
-                            {value.datetime.slice(12,19)}
-                        </Table.Cell>
                         <Table.Cell>
                             {value.trackername}
                         </Table.Cell>
