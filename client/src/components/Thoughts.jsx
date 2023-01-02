@@ -38,7 +38,7 @@ export default function Thoughts() {
                         </Table.HeadCell>
 
                         <Table.HeadCell>
-                        Delete
+                        Delete?
                         </Table.HeadCell>
                     </Table.Head>
 
