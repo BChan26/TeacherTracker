@@ -10,7 +10,7 @@ class TrackerSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Tracker
-        fields = ('id', 'trackername', 'datetime', 'ontask','followexpectation', 'askforhelp', 'comments', 'student',
+        fields = ('student', 'id', 'trackername', 'datetime', 'ontask','followexpectation', 'askforhelp', 'comments',
         )
 
 
