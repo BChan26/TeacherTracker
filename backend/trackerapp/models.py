@@ -30,3 +30,7 @@ class Tracker(models.Model):
 
 class Thought(models.Model):
     thought = models.TextField(blank=False)
+    datetime = models.DateTimeField(null=True)
+
+    def __str__(self):
+        return self.thought
