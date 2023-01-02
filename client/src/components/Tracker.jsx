@@ -16,7 +16,7 @@ export default function Tracker() {
         followexpectation: false,
         askforhelp: false, 
         comments: '',
-        student_id: '',
+        // student_id: '',
     })
 
     const handleLoginForm = (e) => {
@@ -39,12 +39,12 @@ export default function Tracker() {
 
     <form onSubmit={handleLogin}>
         
-    <div className="">
+    {/* <div className="">
             <div className="">
                 <Label value="Student"/>
             </div>
             <TextInput id="student_id" type="student_id" placeholder="student_id" name="student_id" value={formData.student_id} onChange={handleLoginForm}/>
-        </div>
+            </div> */}
         
         <div className="">
             <div className="">
