@@ -11,29 +11,37 @@ return(
     
     <div className="NavBar">
 
-            <div className="NavBarItem">
+            {/* <div className="NavBarItem">
             <Link to= "/CreateStudent">
                 <div>Create Student</div>
             </Link>
-            </div>
+            </div> */}
 
             <div className="NavBarItem">
             <Link to= "/">
-                <div>Tracker</div>
+                <div>New Data</div>
             </Link>
-            </div>
-
-            <div className="NavBarItem">
-                <Link to= "/Thoughts">
-                    <div>Thoughts</div>
-                </Link>
             </div>
 
             <div className="NavBarItem">
                 <Link to= "/Read">
-                    <div>Data</div>
+                    <div>All Data</div>
                 </Link>
             </div>
+
+            <div className="NavBarItem">
+                <Link to= "/NewThought">
+                    <div>New Thought</div>
+                </Link>
+            </div>
+
+            <div className="NavBarItem">
+                <Link to= "/Thoughts">
+                    <div>All Thoughts</div>
+                </Link>
+            </div>
+
+
 
     </div>
     </div>
