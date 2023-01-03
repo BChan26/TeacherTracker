@@ -18,14 +18,13 @@ export default function NewThought() {
     }
 
     const handleThought = async (e) => {
-        try {
+            e.preventDefault()
             const response = await axios.post(`http://localhost:8000/thoughts/`, formData)
-            console.log(response)
+            window.location.href = "http://localhost:3000/"
             return response.data
+            //tracker,jsx has the format for try/catch setup
             
-        } catch (error) {
-            throw error 
-        }
+
     }
 
     return (

@@ -30,7 +30,8 @@ const [editvalue, setEditvalue] = useState(valueEdit)
     event.preventDefault();
         editvaluesCall(editvalue)
         setEditvalue(editvalue)
-        window.location.reload()
+        // window.location.reload()
+        window.location.href = "http://localhost:3000/"
     }
 
     //axios call to update

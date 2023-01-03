@@ -24,14 +24,19 @@ export default function Tracker() {
     }
 
     const handleTracker = async (e) => {
-        try {
-            const response = await axios.post(`http://localhost:8000/trackers/`, formData)
-            console.log(response)
-            return response.data
+        e.preventDefault()
+        const response = await axios.post(`http://localhost:8000/trackers/`, formData)
+        window.location.href = "http://localhost:3000/"
+        return response.data
+
+        // try {
+        //     const response = await axios.post(`http://localhost:8000/trackers/`, formData)
+        //     // console.log(response)
+        //     return response.data
             
-        } catch (error) {
-            throw error 
-        }
+        // } catch (error) {
+        //     throw error 
+        // }
     }
 
     return (
