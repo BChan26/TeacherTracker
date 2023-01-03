@@ -19,11 +19,11 @@ export default function Tracker() {
         // student_id: '',
     })
 
-    const handleLoginForm = (e) => {
+    const handleTrackerForm = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value})
     }
 
-    const handleLogin = async (e) => {
+    const handleTracker = async (e) => {
         try {
             const response = await axios.post(`http://localhost:8000/trackers/`, formData)
             console.log(response)
@@ -37,20 +37,20 @@ export default function Tracker() {
     return (
     <div>
 
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleTracker}>
         
     {/* <div className="">
             <div className="">
                 <Label value="Student"/>
             </div>
-            <TextInput id="student_id" type="student_id" placeholder="student_id" name="student_id" value={formData.student_id} onChange={handleLoginForm}/>
+            <TextInput id="student_id" type="student_id" placeholder="student_id" name="student_id" value={formData.student_id} onChange={handleTrackerForm}/>
             </div> */}
         
         <div className="">
             <div className="">
                 <Label value="Title"/>
             </div>
-            <TextInput id="trackername" type="trackername" placeholder="Title" name="trackername" value={formData.trackername} onChange={handleLoginForm}/>
+            <TextInput id="trackername" type="trackername" placeholder="Title" name="trackername" value={formData.trackername} onChange={handleTrackerForm}/>
         </div>
 
         <div className="">
@@ -84,7 +84,7 @@ export default function Tracker() {
             <div className="">
                 <Label value="Comments"/>
             </div>
-            <TextInput id="comments" type="comments" placeholder="Comments (Optional)" name="comments" value={formData.comments} onChange={handleLoginForm}/>
+            <TextInput id="comments" type="comments" placeholder="Comments (Optional)" name="comments" value={formData.comments} onChange={handleTrackerForm}/>
         </div>
 
         <Button type="submit">

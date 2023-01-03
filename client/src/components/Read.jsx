@@ -2,6 +2,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import moment from "moment"
 import { Table } from "flowbite-react"
+import Edit from './Edit.jsx'
 
 export default function Read() {
 
@@ -25,8 +26,8 @@ export default function Read() {
 
     return(
         <div>
-                <div>
-                <Table hoverable={true}>
+                <div id="table" className="h-full">
+                <Table hoverable={true} className="overflow-y-auto h-full">
 
                     <Table.Head>
                         <Table.HeadCell>
@@ -36,22 +37,22 @@ export default function Read() {
                         Date/Time
                         </Table.HeadCell>
                         <Table.HeadCell>
-                        Tracker Name
+                        Title
                         </Table.HeadCell>
                         <Table.HeadCell>
                         On Task?
                         </Table.HeadCell>
                         <Table.HeadCell>
-                        Following Expectations?
+                        Follows Expectations?
                         </Table.HeadCell>
                         <Table.HeadCell>
                         Asks For Help?
                         </Table.HeadCell>
                         <Table.HeadCell>
-                        Comments
+                        Comment
                         </Table.HeadCell>
                         <Table.HeadCell>
-                        Edit?
+                        Edit
                         </Table.HeadCell>
                     </Table.Head>
 
@@ -80,12 +81,7 @@ export default function Read() {
                             {value.comments}
                         </Table.Cell>
                         <Table.Cell>
-                            <a
-                            href="/tables"
-                            className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-                            >
-                            Edit
-                            </a>
+                            <Edit value={value}/>
                         </Table.Cell>
                         </Table.Row>
                     ))}
