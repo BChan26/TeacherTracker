@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import moment from "moment"
-import { Table } from "flowbite-react"
+import { Table, Button } from "flowbite-react"
 import Delete from './Delete.jsx'
 
 export default function Thoughts() {
@@ -38,7 +38,7 @@ export default function Thoughts() {
                         </Table.HeadCell>
 
                         <Table.HeadCell>
-                        Delete?
+                        Delete
                         </Table.HeadCell>
                     </Table.Head>
 
@@ -54,7 +54,10 @@ export default function Thoughts() {
                         </Table.Cell>
 
                         <Table.Cell>
-                            <Delete value={value}/>
+                        <Button className="button-styling">
+                        <Delete value={value}/>
+                        </Button>
+                            
                         </Table.Cell>
 
                         </Table.Row>
