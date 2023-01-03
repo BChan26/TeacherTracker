@@ -14,7 +14,7 @@ export default function Delete({value}) {
 
     return (
         <div>
-            <button onClick={handleDelete}>Click to Delete</button>
+            <p onClick={handleDelete}>Click to Delete</p>
         </div>
     )
 }
