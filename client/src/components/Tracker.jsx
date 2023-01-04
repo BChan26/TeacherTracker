@@ -16,22 +16,25 @@ export default function Tracker() {
         followexpectation: false,
         askforhelp: false, 
         comments: '',
-        // student_id: '',
+        // student: '',
+        
     })
 
     const handleTrackerForm = (e) => {
+        e.preventDefault()
         setFormData({...formData, [e.target.name]: e.target.value})
+        // console.log(formData)
     }
 
     const handleTracker = async (e) => {
         e.preventDefault()
+        console.log(formData)
         const response = await axios.post(`http://localhost:8000/trackers/`, formData)
         window.location.href = "http://localhost:3000/"
         return response.data
 
         // try {
         //     const response = await axios.post(`http://localhost:8000/trackers/`, formData)
-        //     // console.log(response)
         //     return response.data
             
         // } catch (error) {
@@ -48,14 +51,14 @@ export default function Tracker() {
             <div className="">
                 <Label value="Student"/>
             </div>
-            <TextInput id="student_id" type="student_id" placeholder="student_id" name="student_id" value={formData.student_id} onChange={handleTrackerForm}/>
+            <TextInput id="student" type="student" placeholder="student" name="student" value={formData.student} onChange={handleTrackerForm}/>
             </div> */}
         
         <div className="">
             <div className="">
-                <Label value="Title"/>
+                <Label value="Name/Title"/>
             </div>
-            <TextInput id="trackername" type="trackername" placeholder="Title" name="trackername" value={formData.trackername} onChange={handleTrackerForm}/>
+            <TextInput id="trackername" type="trackername" placeholder="Name/Title" name="trackername" value={formData.trackername} onChange={handleTrackerForm}/>
         </div>
 
         <div className="">

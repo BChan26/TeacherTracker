@@ -11,12 +11,6 @@ return(
     
     <div className="NavBar">
 
-            {/* <div className="NavBarItem">
-            <Link to= "/CreateStudent">
-                <div>Create Student</div>
-            </Link>
-            </div> */}
-
             <div className="NavBarItem">
             <Link to= "/">
                 <div>New Data</div>

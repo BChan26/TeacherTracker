@@ -25,7 +25,7 @@ export default function Thoughts() {
 
     return(
         <div>
-                <div>
+                <div className="h-screen">
                 <Table hoverable={true}>
 
                     <Table.Head>

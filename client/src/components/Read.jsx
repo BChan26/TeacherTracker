@@ -26,13 +26,13 @@ export default function Read() {
 
     return(
         <div>
-                <div id="table" className="h-full">
+                <div id="table" className="h-screen">
                 <Table hoverable={true} className="overflow-y-auto h-full">
 
                     <Table.Head>
-                        <Table.HeadCell>
+                        {/* <Table.HeadCell>
                         Student
-                        </Table.HeadCell>
+                        </Table.HeadCell> */}
                         <Table.HeadCell>
                         Date/Time
                         </Table.HeadCell>
@@ -59,9 +59,9 @@ export default function Read() {
                     <Table.Body className="divide-y">
                     {trackers.map((value) => (
                         <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={value.id}>
-                        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                        {/* <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                             {value.student}
-                        </Table.Cell>
+                        </Table.Cell> */}
                         <Table.Cell>
                             {moment(value.datetime).format("MMMM Do YYYY, h:mm a")}
                         </Table.Cell>                        

@@ -16,7 +16,7 @@ class Student(models.Model):
 
 class Tracker(models.Model):
     student = models.ForeignKey(
-        Student, on_delete=models.CASCADE, related_name="tracker", null = True, blank = True)
+        Student, on_delete=models.CASCADE, related_name="tracker", null=True)
 
     trackername = models.CharField(max_length=100)
     datetime = models.DateTimeField(null=True)
