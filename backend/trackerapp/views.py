@@ -2,7 +2,8 @@ from rest_framework import generics
 from django.shortcuts import render
 from .models import Student, Tracker, Thought
 from .serializers import StudentSerializer, TrackerSerializer, ThoughtSerializer
-# from .filters import StudentFilter
+
+from .filters import TrackerFilter
 
 
 # Create your views here.
@@ -34,3 +35,10 @@ class ThoughtDetail (generics.RetrieveUpdateDestroyAPIView):
 # def StudentFilter(request):
 #     f = StudentFilter(request.GET, queryset=StudentFilter.objects.all())
 #     return render(request, 'localhost:8000/students/', {'filter': f})
+
+def view(request):
+    filter = TrackerFilter(request.GET, queryset=Tracker.objects.all())
+    context = {
+        'filter': filter
+    }
+    return render(request, 'localhost:8000/trackers/', context)
