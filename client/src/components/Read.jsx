@@ -26,7 +26,7 @@ export default function Read() {
 
     return(
         <div>
-                <div id="table" className="">
+                <div id="table" className="h-screen">
                 <Table hoverable={true} className="overflow-y-auto h-full">
 
                     <Table.Head>

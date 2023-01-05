@@ -44,8 +44,8 @@ const [editvalue, setEditvalue] = useState(valueEdit)
     return (
         <div>
             
-            <Dropdown label="Click Here to Edit" className="w-full">
-                <form onSubmit={editHandleSubmit}>
+            <Dropdown label="Click Here to Edit" className=" overflow-y-scroll">
+                <form onSubmit={editHandleSubmit} >
                 
                 <div>
                     <div className="mb-2 block w-full">
