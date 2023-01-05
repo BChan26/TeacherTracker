@@ -29,8 +29,8 @@ export default function Tracker() {
     const handleTracker = async (e) => {
         e.preventDefault()
         console.log(formData)
-        const response = await axios.post(`http://localhost:8000/trackers/`, formData)
-        window.location.href = "http://localhost:3000/"
+        const response = await axios.post(`https://cryptic-eyrie-38765.herokuapp.com/trackers/`, formData)
+        window.location.href = "https://teachertracker.netlify.app/"
         return response.data
 
         // try {

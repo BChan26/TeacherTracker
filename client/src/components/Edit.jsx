@@ -31,12 +31,12 @@ const [editvalue, setEditvalue] = useState(valueEdit)
         editvaluesCall(editvalue)
         setEditvalue(editvalue)
         // window.location.reload()
-        window.location.href = "http://localhost:3000/"
+        window.location.href = "https://teachertracker.netlify.app/"
     }
 
     //axios call to update
     const editvaluesCall = async() => {
-        const post = await axios.put(`http://localhost:8000/trackers/${value.id}`, editvalue)
+        const post = await axios.put(`https://cryptic-eyrie-38765.herokuapp.com/trackers/${value.id}`, editvalue)
         console.log(post.data)
         setEditvalue(post.data)
     }

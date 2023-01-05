@@ -8,7 +8,7 @@ export default function Thoughts() {
 
     const handleThoughts = async (e) => {
         try {
-            const thought = await axios.get(`http://localhost:8000/thoughts/`)
+            const thought = await axios.get(`https://cryptic-eyrie-38765.herokuapp.com/thoughts/`)
             console.log(thought.data)
             setThoughts(thought.data)
             

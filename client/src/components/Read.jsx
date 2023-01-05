@@ -8,7 +8,7 @@ export default function Read() {
 
     const handleTrackers = async (e) => {
         try {
-            const tracker = await axios.get(`http://localhost:8000/trackers/`)
+            const tracker = await axios.get(`https://cryptic-eyrie-38765.herokuapp.com/trackers/`)
             console.log(tracker.data)
             setTrackers(tracker.data)
             

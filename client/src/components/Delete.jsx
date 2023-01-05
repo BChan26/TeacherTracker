@@ -4,9 +4,9 @@ export default function Delete({value}) {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:8000/thoughts/${value.id}`)
+            await axios.delete(`https://cryptic-eyrie-38765.herokuapp.com/${value.id}`)
             // window.location.reload()
-            window.location.href = "http://localhost:3000/"
+            window.location.href = "https://teachertracker.netlify.app/"
         } catch (error){
             alert("An Error Occured")
         }

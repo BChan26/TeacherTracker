@@ -19,8 +19,8 @@ export default function NewThought() {
 
     const handleThought = async (e) => {
             e.preventDefault()
-            const response = await axios.post(`http://localhost:8000/thoughts/`, formData)
-            window.location.href = "http://localhost:3000/"
+            const response = await axios.post(`https://cryptic-eyrie-38765.herokuapp.com/thoughts/`, formData)
+            window.location.href = "https://teachertracker.netlify.app/"
             return response.data
             //tracker,jsx has the format for try/catch setup
             
