@@ -44,7 +44,7 @@ const [editvalue, setEditvalue] = useState(valueEdit)
     return (
         <div>
             
-            <Dropdown label="Click Here to Edit" className="w-full">
+            <Dropdown label="Click Here to Edit" className="h-screen">
                 <form onSubmit={editHandleSubmit}>
                 
                 <div>
